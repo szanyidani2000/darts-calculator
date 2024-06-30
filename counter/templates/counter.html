@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darts Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Darts Game</h1>
+        <button id="toggle-dark-mode" class="btn dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+    <div class="container">
+        <div id="setup" class="setup">
+            <h2>Select number of players</h2>
+            <button id="one-player-btn" class="btn btn-primary">1 Player</button>
+            <button id="two-players-btn" class="btn btn-primary">2 Players</button>
+        </div>
+        <div id="game" class="hidden">
+            <div class="players-container">
+                <div id="player1-panel" class="player-panel">
+                    <h2>Player 1</h2>
+                    <h3>Current Score: <span id="current-score-1">501</span></h3>
+                    <h4>Average: <span id="average-score-1">0.00</span></h4>
+                    <h4>Legs Won: <span id="legs-won-1">0</span></h4>
+                </div>
+                <div id="player2-panel" class="player-panel hidden">
+                    <h2>Player 2</h2>
+                    <h3>Current Score: <span id="current-score-2">501</span></h3>
+                    <h4>Average: <span id="average-score-2">0.00</span></h4>
+                    <h4>Legs Won: <span id="legs-won-2">0</span></h4>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="input-container">
+                    <div class="buttons">
+                        <div class="row">
+                            <button class="num-btn" data-value="7">7</button>
+                            <button class="num-btn" data-value="8">8</button>
+                            <button class="num-btn" data-value="9">9</button>
+                        </div>
+                        <div class="row">
+                            <button class="num-btn" data-value="4">4</button>
+                            <button class="num-btn" data-value="5">5</button>
+                            <button class="num-btn" data-value="6">6</button>
+                        </div>
+                        <div class="row">
+                            <button class="num-btn" data-value="1">1</button>
+                            <button class="num-btn" data-value="2">2</button>
+                            <button class="num-btn" data-value="3">3</button>
+                        </div>
+                        <div class="row">
+                            <button class="num-btn" data-value="0">0</button>
+                        </div>
+                    </div>
+                    <input type="text" id="score-input" maxlength="3">
+                    <div class="action-buttons">
+                        <button id="score-btn" class="btn btn-primary">Score</button>
+                        <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                    </div>
+                    <button id="new-game-btn" class="btn btn-danger">New Game</button>
+                    <button id="back-to-setup-btn" class="btn btn-secondary">Back to Setup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'darts.js' %}"></script>
+</body>
+</html>
