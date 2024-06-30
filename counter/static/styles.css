@@ -73,6 +73,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     box-sizing: border-box;
+    width: 240px;
 }
 
 .player-panel h2, .player-panel h3, .player-panel h4 {
@@ -150,11 +151,11 @@ body {
 
 .btn {
     padding: 5px 15px;
+    background-color: lightgrey;
     font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
     margin: 5px;
 }
 
